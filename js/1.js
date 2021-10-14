@@ -4,26 +4,31 @@ var overSpread = document.querySelector('.overspread');
 var lines = document.querySelector('.line');
 var lic = document.querySelector('.right-border');
 var lis = document.querySelectorAll('.right-border li');
+var flag = true;
 lines.addEventListener('click', function () {
     listenerLis();
 })
 
 overSpread.addEventListener('click', function () {
-    listenerLis();
+    if (flag == false) {
+        listenerLis();
+    }
 })
 
 lic.addEventListener('click', function () {
-    listenerLis();
+    if (flag == false) {
+        listenerLis();
+    }
 })
 
 function listenerLis() {
     for (var i = 0; i < lis.length; i++) {
         if (lis[i].style.animation) {
             lis[i].style.animation = '';
-            console.log(true)
+            flag = true;
         } else {
             lis[i].style.animation = ' sidleIn 0.5s ease-in-out ' + (i * 0.1 + 0.3) + 's forwards';
-            console.log(false)
+            flag = false;
         }
     }
 }
