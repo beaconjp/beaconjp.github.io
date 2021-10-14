@@ -5,28 +5,28 @@
 //         menu: '#myMenu'
 //     });
 // }
-$(document).ready(function() {
+$(document).ready(function () {
     var flag = true;
     var flag1 = true;
-	$('#fullpage').fullpage({
-		//options here
+    $('#fullpage').fullpage({
+        //options here
         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
         menu: '#myMenu',
-        verticalCentered : false,
-        afterLoad (origin, destination, direction) {
+        verticalCentered: false,
+        afterLoad(origin, destination, direction) {
             $('.MODELS').removeClass('fo');
             $('.MODELS').eq(destination.index).addClass('fo');
             if (flag1) {
                 if (destination.index == 0) {
                     $('.crosswise .lirun').addClass('fate');
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $('.crosswise .lirun').addClass('fate1').removeClass('fate');
-                    },1600);
+                    }, 1600);
                     flag1 = false;
                 }
             }
         },
-        onLeave (origin, destination, direction) {
+        onLeave(origin, destination, direction) {
             if (destination.index == 0) {
                 $('.headstock').removeClass('headstock-appear');
                 $('.store').removeClass('headstock-appear');
@@ -45,16 +45,16 @@ $(document).ready(function() {
             // }
         }
     });
-    $('.header .Return-top').on('click', function() {
+    $('.header .Return-top').on('click', function () {
         fullpage_api.moveTo(1);
     })
-    $('.line').click(function() {
-        if(flag) {
+    $('.line').click(function () {
+        if (flag) {
             $(this).addClass('active').removeClass('back');
             $('.right-border').removeClass('close').addClass('open');
             $('.overspread').css({
                 'opacity': '1',
-                'z-index' : '997'
+                'z-index': '997'
             });
             flag = false;
             fullpage_api.setAllowScrolling(flag);
@@ -62,8 +62,8 @@ $(document).ready(function() {
             $(this).addClass('back');
             $('.right-border').removeClass('open').addClass('close');
             $('.overspread').css({
-                'opacity' : '0',
-                'z-index' : '0'
+                'opacity': '0',
+                'z-index': '0'
             });
             $('#fullpage').removeClass('notScroll');
             flag = true;
@@ -71,68 +71,80 @@ $(document).ready(function() {
             fullpage_api.setAllowScrolling(flag);
         }
     })
-    $('.overspread').click(function() {
+    $('.right-border li').click(function () {
         if (flag == false) {
             $('.line').addClass('back');
             $('.right-border').removeClass('open').addClass('close');
-            $(this).css({
-                'opacity' : '0',
-                'z-index' : '0'  
+            $('.overspread').css({
+                'opacity': '0',
+                'z-index': '0'
             });
             flag = true;
             fullpage_api.setAllowScrolling(flag);
         }
     })
-    var $lang = $('.MODELS-one div a'); 
-    $('.page-break li span').on('click', function() {
+    $('.overspread').click(function () {
+        if (flag == false) {
+            $('.line').addClass('back');
+            $('.right-border').removeClass('open').addClass('close');
+            $(this).css({
+                'opacity': '0',
+                'z-index': '0'
+            });
+            flag = true;
+            fullpage_api.setAllowScrolling(flag);
+        }
+    })
+    var $lang = $('.MODELS-one div a');
+    $('.page-break li span').on('click', function () {
         $(this).addClass('status').parent().siblings().children().removeClass('status present');
         $(this).parent().css('border', '1px solid #fff').siblings().css('border', '1px solid transparent');
     })
-    $('.page-break li').eq(0).children().on('click', function() {
+    $('.page-break li').eq(0).children().on('click', function () {
         $('.crosswise .lirun').stop().animate({
-            left : 0
-        },500);
+            left: 0
+        }, 500);
         $('.MODELS-one h1 ul').stop().animate({
-            left : 0
+            left: 0
         }).children().eq(0).addClass('appear').removeClass('disappear').siblings().addClass('disappear').removeClass('appear');
         $lang.eq(0).text('お問い合わせ').siblings().text('了解我们');
     })
-    $('.page-break li').eq(1).children().on('click', function() {
+    $('.page-break li').eq(1).children().on('click', function () {
         $('.crosswise .lirun').stop().animate({
-            left : '-50%'
-        },500);
+            left: '-50%'
+        }, 500);
         $('.MODELS-one h1 ul').stop().animate({
-            left : -$('.MODELS-one h1 ul li').width(),
+            left: -$('.MODELS-one h1 ul li').width(),
         }).children().eq(1).addClass('appear').removeClass('disappear').siblings().addClass('disappear').removeClass('appear');
         $lang.eq(0).text('お問い合わせ').siblings().text('了解我们');
     })
-    $('.page-break li').eq(2).children().on('click', function() {
+    $('.page-break li').eq(2).children().on('click', function () {
         $('.crosswise .lirun').stop().animate({
-            left : '-100%'
-        },500);
+            left: '-100%'
+        }, 500);
         $('.MODELS-one h1 ul').stop().animate({
-            left : -(2 * $('.MODELS-one h1 ul li').width()),
+            left: -(2 * $('.MODELS-one h1 ul li').width()),
         }).children().eq(2).addClass('appear').removeClass('disappear').siblings().addClass('disappear').removeClass('appear');
         $lang.eq(0).text('お問い合わせ').siblings().text('了解我们');
     })
     // 添加点击波纹事件
-    $('.MODELS div a').on('click', function(e) {
-            var x = e.pageX - $(this).offset().left;
-            var y = e.pageY - $(this).offset().top;
-            var $span =  $('<span></span>');
-           $span.css({
-                left : x,
-                top : y
-            }).addClass('damaskeen');
-            $(this).append($span);
-            setTimeout(function() {
-                $span.remove();
-            },1000)
+    $('.MODELS div a').on('click', function (e) {
+        var x = e.pageX - $(this).offset().left;
+        var y = e.pageY - $(this).offset().top;
+        var $span = $('<span></span>');
+        $span.css({
+            left: x,
+            top: y
+        }).addClass('damaskeen');
+        $(this).append($span);
+        setTimeout(function () {
+            $span.remove();
+        }, 1000)
     })
     // 构建元素img添加到section中
     var $img = $('<img src="./images/下载 (2).svg">');
     $img.addClass('z');
-    $img.on('click', function() {
+    $img.on('click', function () {
         fullpage_api.moveSectionDown();
     })
     $('.section:nth-child(-n+4)').append($img);
