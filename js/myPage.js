@@ -5,6 +5,12 @@
 //         menu: '#myMenu'
 //     });
 // }
+window.onpageshow = function (event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+};
+
 $(document).ready(function () {
     var flag = true;
     var flag1 = true;
