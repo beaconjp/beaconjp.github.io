@@ -84,7 +84,7 @@ $(document).ready(function () {
             fullpage_api.setAllowScrolling(flag);
         }
     })
-    $('.overspread').click(function () {
+    $('.overspread').click(function () { 
         if (flag == false) {
             $('.line').addClass('back');
             $('.right-border').removeClass('open').addClass('close');
