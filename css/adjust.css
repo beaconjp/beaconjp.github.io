@@ -1,0 +1,170 @@
+/* 手机 */
+@media only screen and (max-width: 600px) {
+
+    html,
+    body,
+    .section:nth-child(-n+5) {
+        width: 100%;
+    }
+
+    .header {
+        display: flex;
+        width: 100%;
+        padding: 0 0px;
+        height: 152px;
+    }
+
+    .headertop {
+        flex-direction: column;
+    }
+
+    .logo {
+        padding-left: 10px;
+    }
+
+    .headstock {
+        display: none;
+    }
+
+    .store {
+        width: 90px;
+    }
+
+    /* 右侧导航栏 */
+    .right-border {
+        width: 53%;
+    }
+
+    .MODELS-one h1 ul li {
+        font-size: 25px;
+    }
+
+    .MODELS div a {
+        width: 100%;
+        height: 40px;
+        font-size: 12px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .MODELS-two h1 {
+        font-size: 25px;
+    }
+
+    .MODELS-three h1 {
+        font-size: 25px;
+    }
+
+    .MODELS-four h1 {
+        font-size: 25px;
+    }
+
+    .MODELS-fifth h1 {
+        font-size: 25px;
+    }
+
+    .fp-auto-height .link {
+        left: 5%;
+        top: 25%;
+        transform: translate(-5%, -5%);
+    }
+
+    .Return-top {
+        top: 8%;
+    }
+}
+
+/* 平板 */
+@media only screen and (min-width:600px) and (max-width: 960px) {
+
+    html,
+    body,
+    .section:nth-child(-n+5) {
+        width: 100%;
+    }
+
+    .header {
+        width: 100%;
+        padding: 0 20px;
+        height: 52px;
+    }
+
+    .headertop {
+        flex-direction: row;
+    }
+
+    .headstock {
+        justify-content: flex-start;
+    }
+
+    .store {
+        width: 100px;
+    }
+
+    /* 右侧导航栏 */
+    .right-border {
+        width: 33%;
+    }
+
+    .MODELS-one h1 ul li {
+        font-size: 30px;
+    }
+
+    .MODELS-two h1 {
+        font-size: 30px;
+    }
+
+    .MODELS-three h1 {
+        font-size: 30px;
+    }
+
+    .MODELS-four h1 {
+        font-size: 30px;
+    }
+
+    .MODELS-fifth h1 {
+        font-size: 30px;
+    }
+
+    .fp-auto-height .link {
+        left: 20%;
+        top: 40%;
+        transform: translate(-20%, -20%);
+    }
+
+    .Return-top {
+        width: 25px;
+        height: 30px;
+    }
+
+    .Return-top-appear {
+        right: 8%;
+    }
+}
+
+/* PC */
+@media only screen and (min-width: 960px) {
+
+    /* 设置最小值防止窗口缩小，元素格式变形 */
+    html,
+    body,
+    .section:nth-child(-n+5) {
+        min-height: 600px;
+        min-width: 1000px;
+    }
+
+    .header {
+        min-width: 1000px;
+        padding: 0 20px;
+        height: 52px;
+    }
+
+    .headertop {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .fp-auto-height .link {
+        transform: translate(-50%, -50%);
+    }
+}

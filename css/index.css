@@ -72,23 +72,27 @@ video {
     height: 100%;
     object-fit: cover;
 }
-/* 设置最小值防止窗口缩小，元素格式变形 */
-html, body, .section:nth-child(-n+5) {
-    min-height: 600px;
-    min-width: 1000px;
-}
+
 .header {
     display: flex;
-    min-width: 1000px;
+    /* min-width: 1000px; */
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 996;
-    padding: 0 20px;
-    height: 52px;
+    /* padding: 0 20px; */
+    /* height: 152px; */
     font-family: tesila3;
 }
+
+.headertop {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
 .logo {
     float: left;
     padding-top: 16px;
@@ -457,6 +461,8 @@ html, body, .section:nth-child(-n+5) {
 /* 第二屏 */
 .section-two {
     background-color: red;
+    width: 100%;
+    height: 100%;
     background: url(../images/img/it.jpg) no-repeat center center;
     background-size: cover;
 }
@@ -470,6 +476,8 @@ html, body, .section:nth-child(-n+5) {
 }
 /* 第三屏 */
 .section-three {
+    width: 100%;
+    height: 100%;
     background: url(../images/img/studying.jpg) no-repeat center center;
     background-size: cover;
 }
@@ -501,7 +509,7 @@ html, body, .section:nth-child(-n+5) {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50% ,-50%);
+    /* transform: translate(-50%, -50%); */
 }
 .fp-auto-height .link li {
     float: left;
