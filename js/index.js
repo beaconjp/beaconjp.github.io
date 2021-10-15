@@ -1,27 +1,22 @@
 // window.onload = function() {
 //     new fullpage('#fullpage', {
 //         //options here
-//         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+//         anchors: ['res', 'it', 'study', 'ad', 'lastPage'],
 //         menu: '#myMenu'
 //     });
 // }
-window.onpageshow = function (event) {
-    if (event.persisted) {
-        window.location.reload();
-    }
-};
 
 $(document).ready(function () {
     var flag = true;
     var flag1 = true;
     $('#fullpage').fullpage({
         //options here
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+        anchors: ['res', 'it', 'study', 'ad', 'hotel'],
         menu: '#myMenu',
         verticalCentered: false,
         afterLoad(origin, destination, direction) {
-            $('.MODELS').removeClass('fo');
-            $('.MODELS').eq(destination.index).addClass('fo');
+            $('.BEACON').removeClass('fo');
+            $('.BEACON').eq(destination.index).addClass('fo');
             if (flag1) {
                 if (destination.index == 0) {
                     $('.crosswise .lirun').addClass('fate');
@@ -101,7 +96,7 @@ $(document).ready(function () {
             fullpage_api.setAllowScrolling(flag);
         }
     })
-    var $lang = $('.MODELS-one div a');
+    var $lang = $('.BEACON-one div a');
     $('.page-break li span').on('click', function () {
         $(this).addClass('status').parent().siblings().children().removeClass('status present');
         $(this).parent().css('border', '1px solid #fff').siblings().css('border', '1px solid transparent');
@@ -110,7 +105,7 @@ $(document).ready(function () {
         $('.crosswise .lirun').stop().animate({
             left: 0
         }, 500);
-        $('.MODELS-one h1 ul').stop().animate({
+        $('.BEACON-one h1 ul').stop().animate({
             left: 0
         }).children().eq(0).addClass('appear').removeClass('disappear').siblings().addClass('disappear').removeClass('appear');
         $lang.eq(0).text('お問い合わせ').siblings().text('了解我们');
@@ -119,8 +114,8 @@ $(document).ready(function () {
         $('.crosswise .lirun').stop().animate({
             left: '-50%'
         }, 500);
-        $('.MODELS-one h1 ul').stop().animate({
-            left: -$('.MODELS-one h1 ul li').width(),
+        $('.BEACON-one h1 ul').stop().animate({
+            left: -$('.BEACON-one h1 ul li').width(),
         }).children().eq(1).addClass('appear').removeClass('disappear').siblings().addClass('disappear').removeClass('appear');
         $lang.eq(0).text('お問い合わせ').siblings().text('了解我们');
     })
@@ -128,13 +123,13 @@ $(document).ready(function () {
         $('.crosswise .lirun').stop().animate({
             left: '-100%'
         }, 500);
-        $('.MODELS-one h1 ul').stop().animate({
-            left: -(2 * $('.MODELS-one h1 ul li').width()),
+        $('.BEACON-one h1 ul').stop().animate({
+            left: -(2 * $('.BEACON-one h1 ul li').width()),
         }).children().eq(2).addClass('appear').removeClass('disappear').siblings().addClass('disappear').removeClass('appear');
         $lang.eq(0).text('お問い合わせ').siblings().text('了解我们');
     })
     // 添加点击波纹事件
-    $('.MODELS div a').on('click', function (e) {
+    $('.BEACON div a').on('click', function (e) {
         var x = e.pageX - $(this).offset().left;
         var y = e.pageY - $(this).offset().top;
         var $span = $('<span></span>');

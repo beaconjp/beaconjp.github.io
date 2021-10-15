@@ -198,7 +198,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//Navigation
 	menu: '#menu',
 	lockAnchors: false,
-	anchors:['firstPage', 'secondPage'],
+	anchors:['res', 'it'],
 	navigation: false,
 	navigationPosition: 'right',
 	navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -274,18 +274,18 @@ var myFullpage = new fullpage('#fullpage', {
 ### Créer des liens vers des sections ou des diapositives
 Si vous utilisez fullPage.js avec des liens d'ancrage pour les sections (en utilisant l'option `anchors` ou l'attribut `data-anchor` dans chaque section), alors vous pourrez également utiliser des liens d'ancrage pour naviguer directement vers une certaine diapositive dans une section.
 
-Ceci serait un exemple d'un lien avec un ancre : http://alvarotrigo.com/fullPage/#secondPage/2 (qui est l'URL que vous verrez une fois que vous accéderez à cette section/diapositive manuellement)
-Remarquez que la dernière partie de l'URL se termine par `#secondPage/2`.
+Ceci serait un exemple d'un lien avec un ancre : http://alvarotrigo.com/fullPage/#it/2 (qui est l'URL que vous verrez une fois que vous accéderez à cette section/diapositive manuellement)
+Remarquez que la dernière partie de l'URL se termine par `#it/2`.
 
 Avoir l'initialisation suivante :
 
 ```javascript
 new fullpage('#fullpage', {
-	ancres :['firstPage','secondPage','thirdPage']
+	ancres :['res','it','study']
 }) ;
 ```
 
-L'ancre à la fin de l'URL `#secondPage/2` définit respectivement la section et la diapositive de destination. Dans l'URL précédente, la section de destination sera celle définie avec l'ancre `secondPage` et la diapositive sera la 2ème diapositive, car nous utilisons l'index `2` pour cela. (la première diapositive d'une section a l'index 0, car techniquement c'est une section).
+L'ancre à la fin de l'URL `#it/2` définit respectivement la section et la diapositive de destination. Dans l'URL précédente, la section de destination sera celle définie avec l'ancre `it` et la diapositive sera la 2ème diapositive, car nous utilisons l'index `2` pour cela. (la première diapositive d'une section a l'index 0, car techniquement c'est une section).
 
 Nous aurions pu utiliser une ancre personnalisée pour la diapositive au lieu de son index si nous avions utilisé l'attribut `data-anchor` sur le balisage HTML de cette façon :
 
@@ -297,7 +297,7 @@ Nous aurions pu utiliser une ancre personnalisée pour la diapositive au lieu de
 	<div class="slide" data-anchor="slide4"> Slide 4 </div>
 </div>
 ```
-Dans ce dernier cas, l'URL que nous utiliserions serait `#secondPage/slide3`, qui est l'équivalent de notre précédente `#secondPage/2`.
+Dans ce dernier cas, l'URL que nous utiliserions serait `#it/slide3`, qui est l'équivalent de notre précédente `#it/2`.
 
 Notez que les ancres de section peuvent aussi être définies de la même manière, en utilisant l'attribut `data-anchor`, si aucun tableau `anchors` n'est fourni.
 
@@ -324,7 +324,7 @@ Fullpage.js ajoute plusieurs classes dans différents éléments pour garder une
 
 - `active` est ajouté la section visible actuelle et la diapositive.
 - `active` est ajouté à l'élément de menu courant (si vous utilisez l'option "menu").
-- Une classe de la forme `fp-viewing-SECTION-SLIDE` est ajoutée à l'élément `body` du site. (ex :[`fp-viewing-secondPage-0`](http://alvarotrigo.com/fullPage/#secondPage))) Les parties ` SECTION ` et ` SLIDE ` seront les ancres (ou index si aucune ancre n'est fournie) de la section et de la glissière courante.
+- Une classe de la forme `fp-viewing-SECTION-SLIDE` est ajoutée à l'élément `body` du site. (ex :[`fp-viewing-it-0`](http://alvarotrigo.com/fullPage/#it))) Les parties ` SECTION ` et ` SLIDE ` seront les ancres (ou index si aucune ancre n'est fournie) de la section et de la glissière courante.
 - `fp-responsive` est ajouté à l'élément `body` lorsque l'entrée en mode réactif
 - `fp-enabled ` est ajouté à l'élément `html` lorsque fullpage.js est activé. (et enlevés lorsqu'ils sont détruits).
 - `fp-destroyed` est ajouté au conteneur fullpage.js lorsque fullPage.js est détruit.
@@ -486,15 +486,15 @@ Cela ne générera pas de menu mais ajoutera simplement la classe `active` à l'
 Afin de lier les éléments du menu avec les sections, un data-tag HTML 5 (`data-menuanchor`) sera nécessaire à utiliser avec les mêmes liens d'ancrage que ceux utilisés dans les sections. Exemple :
 ```html
 <ul id="myMenu">
-	<li data-menuanchor="firstPage" class="active"><a href="#firstPage">Première section</a></li>
-	<li data-menuanchor="secondPage"><a href="#secondPage">Seconde section</a></li>
-  <li data-menuanchor="thirdPage"><a href="#thirdPage">Troisième section</a></li>
-<li data-menuanchor="fourthPage"><a href="#fourthPage">Quatrième section</a></li>
+	<li data-menuanchor="res" class="active"><a href="#res">Première section</a></li>
+	<li data-menuanchor="it"><a href="#it">Seconde section</a></li>
+  <li data-menuanchor="study"><a href="#study">Troisième section</a></li>
+<li data-menuanchor="ad"><a href="#ad">Quatrième section</a></li>
 </ul>
 ```
 ```javascript
 new fullpage('#fullpage', {
-anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+anchors: ['res', 'it', 'study', 'ad', 'lastPage'],
 menu : #myMenu
 }) ;
 ```
@@ -745,7 +745,7 @@ Exemple :
 
 ```javascript
 new fullpage('#fullpage', {
-	des ancres : ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	des ancres : ['res', 'it', 'study', 'ad', 'lastPage'],
 
 	afterLoad : function(origine, destination, direction){
 		var loadedSection = this;
@@ -767,7 +767,7 @@ Exemple:s
 
 ```javascript
 new fullpage('#fullpage', {
-	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	anchors: ['res', 'it', 'study', 'ad', 'lastPage'],
 
 	afterLoad: function(origin, destination, direction){
 		var loadedSection = this;
@@ -907,13 +907,13 @@ Exemple :
 
 ```Javascript
 new fullpage('#fullpage', {
-	anchors : 'firstPage','secondPage','thirdPage','fourthPage','lastPage'],
+	anchors : 'res','it','study','ad','lastPage'],
 
 	afterSlideLoad : function( section, origin, destination, direction){
 		var loadedSlide = this;
 
 		//première diapositive de la deuxième section
-		if(section.anchor =='secondPage' && destination.index == 1){
+		if(section.anchor =='it' && destination.index == 1){
 			alert("Première diapositive chargée");
 		}
 

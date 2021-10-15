@@ -195,7 +195,7 @@ new fullpage('#fullpage', {
 	//Navegación
 	menu: '#menu',
 	lockAnchors: false,
-	anchors:['firstPage', 'secondPage'],
+	anchors:['res', 'it'],
 	navigation: false,
 	navigationPosition: 'right',
 	navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -269,18 +269,18 @@ new fullpage('#fullpage', {
 ### Crear enlaces a secciones y diapositivas
 Si usas fullPage.js con enlaces de anclaje para las secciones (haciendo uso de la opción `anchors` o del atributo `data-anchor` en cada sección), entonces también podrás usar los enlaces de anclaje para navegar a una sección o diapositiva en particular.
 
-Esto sería un ejemplo de un enlace con un enlace de anclaje: https://alvarotrigo.com/fullPage/#secondPage/2 (que es la URL que verás en la URL si accedes a esa sección/diapositiva manualmente).
-Fíjate que la última parte de la URL termina en: `#secondPage/2`.
+Esto sería un ejemplo de un enlace con un enlace de anclaje: https://alvarotrigo.com/fullPage/#it/2 (que es la URL que verás en la URL si accedes a esa sección/diapositiva manualmente).
+Fíjate que la última parte de la URL termina en: `#it/2`.
 
 Teniendo la siguiente inicialización:
 
 ```javascript
 new fullpage('#fullpage', {
-	anchors:['firstPage', 'secondPage', 'thirdPage']
+	anchors:['res', 'it', 'study']
 });
 ```
 
-El enlace de anclaje al final de la URL `#secondPage/2` define la sección y diapositiva de destino respectivamente. En la URL anterior, la sección de destino será la que está definida con el enlace de anclaje `secondPage` y la diapositiva será la segunda de dicha sección porque estamos usando el índice `2` para ella. La primera diapositiva de una sección tendrá índice 0, porque técnicamente será tratada como una sección.
+El enlace de anclaje al final de la URL `#it/2` define la sección y diapositiva de destino respectivamente. En la URL anterior, la sección de destino será la que está definida con el enlace de anclaje `it` y la diapositiva será la segunda de dicha sección porque estamos usando el índice `2` para ella. La primera diapositiva de una sección tendrá índice 0, porque técnicamente será tratada como una sección.
 
 Podríamos haber usado un enlace de anclaje personalizado para la diapositiva en lugar de su índice si hubiésemos usado el atributo `data-anchor` en la estructura HTML:
 
@@ -292,7 +292,7 @@ Podríamos haber usado un enlace de anclaje personalizado para la diapositiva en
 	<div class="slide" data-anchor="slide4"> Slide 4 </div>
 </div>
 ```
-En este último caso, la URL que usaríamos sería `#secondPage/slide3`, que es la equivalente a nuestra URL anterior `#secondPage/2`.
+En este último caso, la URL que usaríamos sería `#it/slide3`, que es la equivalente a nuestra URL anterior `#it/2`.
 
 Ten en cuenta que los enlaces de anclaje en la sección también pueden definirse del mismo modo, es decir, usando el atributo `data-anchor` siempre y cuando no hayamos definido la opción `anchors` al iniciar fullPage.js.
 
@@ -317,7 +317,7 @@ Fullpage.js añade multiples clases en diferentes elementos para reflejar el est
 
 - `active` es añadido en la sección o diapositiva actual.
 - `active` es añadido en el elemento actual del menú (si se usa la opción `menu`)
-- Una clase con la forma `fp-viewing-SECCION-DIAPOSITIVA` es añadida al elemento `body` de la página. (ej: [`fp-viewing-secondPage-0`](https://alvarotrigo.com/fullPage/#secondPage)) Las partes de `SECCION` Y `DIAPOSITVA` serán los enlaces de anclaje (o los índices) de la sección o diapositiva actual.
+- Una clase con la forma `fp-viewing-SECCION-DIAPOSITIVA` es añadida al elemento `body` de la página. (ej: [`fp-viewing-it-0`](https://alvarotrigo.com/fullPage/#it)) Las partes de `SECCION` Y `DIAPOSITVA` serán los enlaces de anclaje (o los índices) de la sección o diapositiva actual.
 - `fp-responsive` es añadido al elemento `body` cuando se entra en modo "responsive".
 - `fp-enabled` es añadido al elemento `html` cuando fullPage.js está activo (y se elimina cuando se destruye).
 - `fp-destroyed` es añadido al contenedor usado para iniciar fullPage.js cuando se destruye fullPage.js.
@@ -477,15 +477,15 @@ Esta opción no generará ningún menú, sino que simplemente añade la clase `a
 Para relacionar los elementos del menú con las secciones se requiere del uso del atributo `data-menuanchor` que tendrá que tener el mismo valor que el enlace de anclaje que la sección a la que haga referencia. Por ejemplo:
 ```html
 <ul id="myMenu">
-	<li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
-	<li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
-	<li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
-	<li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
+	<li data-menuanchor="res" class="active"><a href="#res">First section</a></li>
+	<li data-menuanchor="it"><a href="#it">Second section</a></li>
+	<li data-menuanchor="study"><a href="#study">Third section</a></li>
+	<li data-menuanchor="ad"><a href="#ad">Fourth section</a></li>
 </ul>
 ```
 ```javascript
 new fullpage('#fullpage', {
-	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	anchors: ['res', 'it', 'study', 'ad', 'lastPage'],
 	menu: '#myMenu'
 });
 ```
@@ -741,7 +741,7 @@ Por ejemplo:
 
 ```javascript
 new fullpage('#fullpage', {
-	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	anchors: ['res', 'it', 'study', 'ad', 'lastPage'],
 
 	afterLoad: function(origin, destination, direction){
 		var loadedSection = this;
@@ -880,13 +880,13 @@ Ejemplo:
 
 ```javascript
 new fullpage('#fullpage', {
-	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	anchors: ['res', 'it', 'study', 'ad', 'lastPage'],
 
 	afterSlideLoad: function( section, origin, destination, direction){
 		var loadedSlide = this;
 
 		//primera diapositiva de la segunda sección
-		if(section.anchor == 'secondPage' && destination.index == 1){
+		if(section.anchor == 'it' && destination.index == 1){
 			alert("Primera diapositiva cargada");
 		}
 

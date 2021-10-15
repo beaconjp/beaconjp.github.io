@@ -188,7 +188,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//导航
 	menu: '#menu',
 	lockAnchors: false,
-	anchors:['firstPage', 'secondPage'],
+	anchors:['res', 'it'],
 	navigation: false,
 	navigationPosition: 'right',
 	navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -266,18 +266,18 @@ var myFullpage = new fullpage('#fullpage', {
 如果你在 section 中使用 fullPage.js 和锚链接（在每个 section 使用 `anchors` 选项或属性 `data-anchor` ），那么你将能够在一个 section 里使用锚链接直接导航到某个 slide。
 
 这是一个锚链接的例子：
-http://alvarotrigo.com/fullPage/#secondPage/2 （在你手动访问该 section/slide 就会看到的 URL ）
-请注意，URL 的最后部分以 `＃secondPage / 2` 结尾。
+http://alvarotrigo.com/fullPage/#it/2 （在你手动访问该 section/slide 就会看到的 URL ）
+请注意，URL 的最后部分以 `＃it / 2` 结尾。
 
 以下初始化：
 
 ```javascript
 new fullpage('#fullpage', {
-	anchors:['firstPage', 'secondPage', 'thirdPage']
+	anchors:['res', 'it', 'study']
 });
 ```
 
-URL `#secondPage/2`  结尾处的锚分别定义了目标 section 和 slide 。 在前面的 URL 中，目标 section 将是使用锚点  `secondPage`  定义的 section ，slide 将会是第 2 张 slide ，因为我们使用索引  `2`  。 （一个 section 的第一个 slide 有索引 0 ，在技术上这是一个 section ）。
+URL `#it/2`  结尾处的锚分别定义了目标 section 和 slide 。 在前面的 URL 中，目标 section 将是使用锚点  `it`  定义的 section ，slide 将会是第 2 张 slide ，因为我们使用索引  `2`  。 （一个 section 的第一个 slide 有索引 0 ，在技术上这是一个 section ）。
 
 如果我们在HTML标记中使用属性 `data-anchor` ，就可以使用自定义锚点来代替它的索引：
 
@@ -289,7 +289,7 @@ URL `#secondPage/2`  结尾处的锚分别定义了目标 section 和 slide 。 
 	<div class="slide" data-anchor="slide4"> slide 4 </div>
 </div>
 ```
-在最后一种情况中，我们使用的URL将是 `#secondPage/slide3` ，这相当于之前的 `#secondPage/2` 。
+在最后一种情况中，我们使用的URL将是 `#it/slide3` ，这相当于之前的 `#it/2` 。
 
 请注意，如果没有提供 `anchors` 数组，则也可以使用 `data-anchor` 属性以同样的方式定义节锚点。
 
@@ -314,7 +314,7 @@ Fullpage.js 在不同的元素中添加多个类型来保存网站状态的记�
 
 - `active` 被添加到当前可见 section 和 slide 。
 - `active` 被添加到当前菜单元素（如果使用 `menu` 选项）。
-- `fp-viewing-SECTION-SLIDE` 形式的类型被添加到网站的 `body` 元素中。(例如： [`fp-viewing-secondPage-0`](http://alvarotrigo.com/fullPage/#secondPage)) `SECTION` 和 `SLIDE` 部分将成为当前 section 和 slide 的锚（或索引，如果没有提供锚）。
+- `fp-viewing-SECTION-SLIDE` 形式的类型被添加到网站的 `body` 元素中。(例如： [`fp-viewing-it-0`](http://alvarotrigo.com/fullPage/#it)) `SECTION` 和 `SLIDE` 部分将成为当前 section 和 slide 的锚（或索引，如果没有提供锚）。
 - 当进入响应模式时，`fp-responsive` 添加到 `body` 元素
 - 当启用 fullpage.js 时，`fp-enabled` 添加到 `html` 元素。 （并在销毁时被移除）。
 - 当 fullPage.js 被销毁时，`fp-destroyed` 被添加到 fullpage.js 容器中。
@@ -475,15 +475,15 @@ new fullpage('#fullpage', {
 为了将菜单的元素与各个部分相链接，将需要一个HTML 5 数据标签（data-menuanchor）来关联在 section中使用的锚链接。 例：
 ```html
 <ul id="myMenu">
-	<li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
-	<li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
-	<li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
-	<li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
+	<li data-menuanchor="res" class="active"><a href="#res">First section</a></li>
+	<li data-menuanchor="it"><a href="#it">Second section</a></li>
+	<li data-menuanchor="study"><a href="#study">Third section</a></li>
+	<li data-menuanchor="ad"><a href="#ad">Fourth section</a></li>
 </ul>
 ```
 ```javascript
 new fullpage('#fullpage', {
-	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	anchors: ['res', 'it', 'study', 'ad', 'lastPage'],
 	menu: '#myMenu'
 });
 ```
@@ -749,7 +749,7 @@ fullpage_api.responsiveSlides.toSlides();
 
 ```javascript
 new fullpage('#fullpage', {
-	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	anchors: ['res', 'it', 'study', 'ad', 'lastPage'],
 
 	afterLoad: function(origin){
 		var loadedSection = this;
@@ -888,13 +888,13 @@ new fullpage('#fullpage', {
 
 ```javascript
 new fullpage('#fullpage', {
-	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	anchors: ['res', 'it', 'study', 'ad', 'lastPage'],
 
 	afterSlideLoad: function( section, origin, destination, direction){
 		var loadedSlide = this;
 
 		//第二个section的第一个slide
-		if(section.anchor == 'secondPage' && destination.index == 1){
+		if(section.anchor == 'it' && destination.index == 1){
 			alert("第一张slide加载完毕");
 		}
 

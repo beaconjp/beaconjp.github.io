@@ -2,15 +2,9 @@
 <html lang="en">
 
 <head>
-    <!-- sunyujuan 10-14 start -->
+    <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <!-- end -->
-    <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-
     <title>BEACON株式会社</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./fullPage.js-master/src/fullpage.css">
@@ -23,7 +17,7 @@
     <script src="./fullPage.js-master/vendors/easings.min.js"></script>
     <script src="./fullPage.js-master/vendors/scrolloverflow.min.js"></script>
     <script src="./fullPage.js-master/src/fullpage.js"></script>
-    <script src="./js/myPage.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 
 <body>
@@ -38,11 +32,11 @@
             <!-- 导航 -->
             <div class="headstock">
                 <ul>
-                    <li><a href="#firstPage">不動産</a></li>
-                    <li><a href="#secondPage">IT・情報システム</a></li>
-                    <li><a href="#thirdPage">留学</a></li>
-                    <li><a href="#fourthPage">企業広告</a></li>
-                    <li><a href="#fifthPage">旅館</a></li>
+                    <li><a href="#res">不動産</a></li>
+                    <li><a href="#it">IT・情報システム</a></li>
+                    <li><a href="#study">留学</a></li>
+                    <li><a href="#ad">企業広告</a></li>
+                    <li><a href="#hotel">旅館</a></li>
                 </ul>
             </div>
         </div>
@@ -58,13 +52,13 @@
                 <div class="und-line"></div>
             </div>
         </div>
-        <div class="Return-top"><img src="./images/下载 (2).svg"></div>
+        <div class="Return-top"><img src="./images/arrow.svg"></div>
     </div>
     <!-- 分屏 -->
     <div id="fullpage">
         <!-- 第一个屏幕 -->
         <div class="section section-one">
-            <div class="MODELS-one MODELS">
+            <div class="BEACON-one BEACON">
                 <h1>
                     <ul>
                         <li class="disappear">买卖 租赁</li>
@@ -83,11 +77,11 @@
             </ul>
             <ul class="right-border">
                 <!-- <li><a href="#"></a></li> -->
-                <li><a href="#firstPage">不動産</a></li>
-                <li><a href="#secondPage">IT・情報システム</a></li>
-                <li><a href="#thirdPage">留学</a></li>
-                <li><a href="#fourthPage">企業広告</a></li>
-                <li><a href="#fifthPage">旅館</a></li>
+                <li><a href="#res">不動産</a></li>
+                <li><a href="#it">IT・情報システム</a></li>
+                <li><a href="#study">留学</a></li>
+                <li><a href="#ad">企業広告</a></li>
+                <li><a href="#hotel">旅館</a></li>
             </ul>
             <div class="overspread"></div>
             <ul class="page-break">
@@ -102,7 +96,7 @@
 
         <!-- 第二个屏幕 -->
         <div class="section section-two">
-            <div class="MODELS-two MODELS">
+            <div class="BEACON-two BEACON">
                 <h1>IT・情報システム</h1>
                 <div>
                     <a href="#" target="_blank">アプリ開発</a>
@@ -116,7 +110,7 @@
         </div>
         <!-- 第三个屏幕 -->
         <div class="section section-three">
-            <div class="MODELS-three MODELS">
+            <div class="BEACON-three BEACON">
                 <h1>留学</h1>
                 <h4>进学 就职</h4>
                 <div>
@@ -126,7 +120,7 @@
         </div>
         <!-- 第四个屏幕 -->
         <div class="section section-four">
-            <div class="MODELS-four MODELS">
+            <div class="BEACON-four BEACON">
                 <h1>企業広告</h1>
                 <div>
                     <a href="#">お問い合わせ</a>
@@ -138,7 +132,7 @@
         </div>
         <!-- 第五个屏幕 -->
         <div class="section section-fifth">
-            <div class="MODELS-fifth MODELS">
+            <div class="BEACON-fifth BEACON">
                 <h1>旅館</h1>
                 <div>
                     <a href="#">お問い合わせ</a>
@@ -160,23 +154,23 @@
     </div>
     <!-- 左侧菜单栏 -->
     <ul id="myMenu">
-        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">
+        <li data-menuanchor="res" class="active"><a href="#res">
                 <span>不動産</span>
             </a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">
+        <li data-menuanchor="it"><a href="#it">
                 <span>IT・情報システム</span>
             </a></li>
-        <li data-menuanchor="thirdPage"><a href="#thirdPage">
+        <li data-menuanchor="study"><a href="#study">
                 <span>留学</span>
             </a></li>
-        <li data-menuanchor="fourthPage"><a href="#fourthPage">
+        <li data-menuanchor="ad"><a href="#ad">
                 <span>企業広告</span>
             </a></li>
-        <li data-menuanchor="fifthPage"><a href="#fifthPage">
+        <li data-menuanchor="hotel"><a href="#hotel">
                 <span>旅館</span>
             </a></li>
     </ul>
-    <script src="./js/1.js"></script>
+    <script src="./js/listener.js"></script>
 </body>
 
 </html>

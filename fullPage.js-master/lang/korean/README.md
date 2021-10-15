@@ -185,7 +185,7 @@ $(document).ready(function() {
 		//이동
 		menu: '#menu',
 		lockAnchors: false,
-		anchors:['firstPage', 'secondPage'],
+		anchors:['res', 'it'],
 		navigation: false,
 		navigationPosition: 'right',
 		navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -261,17 +261,17 @@ $(document).ready(function() {
 ### 구역 또는 슬라이드로 가는 링크 만들기
 fullPage.js를 (`anchors 옵션이나 각 구역마다 `data-anchor 속성을 쓰셔서) 구역의 앵커 링크와 쓰신다면 앵커 링크를 통해 구역 내부 특정 슬라이드로 바로 가실 수 있습니다.
 
-앵커가 들어간 링크 예시는 다음과 같습니다. http://alvarotrigo.com/fullPage/#secondPage/2 (해당 구역/슬라이드에 수동으로 가신다면 보시게 될 URL입니다) URL의 끝부분이 `#secondPage/2`로 끝나는 것에 주목해 주세요.
+앵커가 들어간 링크 예시는 다음과 같습니다. http://alvarotrigo.com/fullPage/#it/2 (해당 구역/슬라이드에 수동으로 가신다면 보시게 될 URL입니다) URL의 끝부분이 `#it/2`로 끝나는 것에 주목해 주세요.
 
 초기 설정이 다음과 같이 설정될 경우
 
 ```javascript
 new fullpage('#fullpage', {
-	anchors:['firstPage', 'secondPage', 'thirdPage']
+	anchors:['res', 'it', 'study']
 });
 ```
 
-`#secondPage/2` URL 끝에 있는 앵커가 목적지 구역과 슬라이드를 각각 정의합니다. 이전 URL에서는 `secondPage` 앵커로 정의된 구역이 목적지이고, 목적지 슬라이드는 색인으로 2를 쓰고 있기 때문에 두번째 슬라이드가 됩니다. (구역의 첫번째 슬라이드는 엄밀히 말해 구역이기 때문에 색인이 0입니다.)
+`#it/2` URL 끝에 있는 앵커가 목적지 구역과 슬라이드를 각각 정의합니다. 이전 URL에서는 `it` 앵커로 정의된 구역이 목적지이고, 목적지 슬라이드는 색인으로 2를 쓰고 있기 때문에 두번째 슬라이드가 됩니다. (구역의 첫번째 슬라이드는 엄밀히 말해 구역이기 때문에 색인이 0입니다.)
 
 HTML 교정(마크업)에서 `data-anchor` 속성을 쓴다면 슬라이드에 색인 대신 맞춤화된 앵커를 쓸 수도 있습니다.
 
@@ -283,7 +283,7 @@ HTML 교정(마크업)에서 `data-anchor` 속성을 쓴다면 슬라이드에 �
 	<div class="slide" data-anchor="slide4"> Slide 4 </div>
 </div>
 ```
-이 마지막 사례에서는 이전에 다뤘던 `#secondPage/2`와 동일한 역할을 하는 `#secondPage/slide3` URL을 쓰게 됩니다.
+이 마지막 사례에서는 이전에 다뤘던 `#it/2`와 동일한 역할을 하는 `#it/slide3` URL을 쓰게 됩니다.
 
 만약 `anchors` 배열이 없다면 `data-anchor` 속성을 써서 동일하게 구역 앵커를 정의할 수 있음을 기억해 주세요.
 
@@ -308,7 +308,7 @@ Fullpage.js는 웹사이트의 상태를 기록하기 위해 여러가지 요소
 
 - 현재 보여지는 구역과 슬라이드에 `active`가 추가됩니다.
 - (만약 `menu` 옵션을 쓰신다면) 현 메뉴 요소에 `active`가 추가됩니다.
-- 웹사이트의 `body` 요소에 `fp-viewing-SECTION-SLIDE` 양식의 클래스가 추가됩니다. (예: [`fp-viewing-secondPage-0`](http://alvarotrigo.com/fullPage/#secondPage)) `SECTION`과 `SLIDE` 부분이 현 구역과 슬라이드의 앵커가 (앵커가 없는 경우 색인이) 됩니다.
+- 웹사이트의 `body` 요소에 `fp-viewing-SECTION-SLIDE` 양식의 클래스가 추가됩니다. (예: [`fp-viewing-it-0`](http://alvarotrigo.com/fullPage/#it)) `SECTION`과 `SLIDE` 부분이 현 구역과 슬라이드의 앵커가 (앵커가 없는 경우 색인이) 됩니다.
 - 반응형 모드로 들어갈 때 `fp-responsive`가 `body` 요소에 추가됩니다.
 - fullpage.js가 활성화될 때  `html` 요소에 `fp-enabled`가 추가됩니다. (그리고 없어지면 제거됩니다.)
 - fullpage.js가 없어질 때 fullpage.js 컨테이너에 `fp-destroyed`가 추가됩니다.
@@ -462,15 +462,15 @@ new fullpage('#fullpage', {
 - `menu`: (기본값 `false`) 선택자를 써서 구역에 링크할 메뉴를 구체적으로 정할 수 있습니다. 이렇게 하면 `active` 클래스를 써서 구역을 스크롤할때 메뉴에 있는 대응하는 요소가 활성화됩니다. 이렇게 하면 메뉴를 만드는 것이 아니라 `active` 클래스를 대응하는 앵커 링크와 함께 주어진 메뉴에 있는 요소에 추가만 합니다. 구역에 메뉴 요소의 링크를 걸기 위해서는 구역 안에서 사용된 것과 동일한 앵커 링크와 함께 사용하기 위해 HTML 5 데이터-태크(`data-menuanchor`)가 필요합니다. 다음은 예시입니다.
 ```html
 <ul id="myMenu">
-	<li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
-	<li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
-	<li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
-	<li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
+	<li data-menuanchor="res" class="active"><a href="#res">First section</a></li>
+	<li data-menuanchor="it"><a href="#it">Second section</a></li>
+	<li data-menuanchor="study"><a href="#study">Third section</a></li>
+	<li data-menuanchor="ad"><a href="#ad">Fourth section</a></li>
 </ul>
 ```
 ```javascript
 new fullpage('#fullpage', {
-	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	anchors: ['res', 'it', 'study', 'ad', 'lastPage'],
 	menu: '#myMenu'
 });
 ```
@@ -734,7 +734,7 @@ fullpage_api.responsiveSlides.toSlides();
 
 ```javascript
 new fullpage('#fullpage', {
-	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	anchors: ['res', 'it', 'study', 'ad', 'lastPage'],
 
 	afterLoad: function(origin){
 		var loadedSection = this;
@@ -872,13 +872,13 @@ new fullpage('#fullpage', {
 
 ```javascript
 new fullpage('#fullpage', {
-	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	anchors: ['res', 'it', 'study', 'ad', 'lastPage'],
 
 	afterSlideLoad: function( section, origin, destination, direction){
 		var loadedSlide = this;
 
 		//두번째 구역의 첫번째 슬라이드
-		if(section.anchor == 'secondPage' && destination == 1){
+		if(section.anchor == 'it' && destination == 1){
 			alert("First slide loaded");
 		}
 

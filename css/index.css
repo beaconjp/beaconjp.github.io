@@ -372,7 +372,7 @@ video {
 .disappear {
     opacity: 0;
 }
-.MODELS {
+.BEACON {
         position: absolute;
         opacity: 0;
         text-align: center;
@@ -383,7 +383,7 @@ video {
         width: 50%;
         height: 50%;
 }
-.MODELS-one {
+.BEACON-one {
     height: 30%;
     top: 37%;
 }
@@ -392,14 +392,14 @@ video {
     transform: translate(-50%,-70%);
     transition: 1.5s ease-in-out;
 }
-.MODELS h1 {
+.BEACON h1 {
     font-family: tesila2;
     font-weight: 400;
     font-size: 40px;
     color: #fff;
     margin: 20px 0;
 }
-.MODELS div a {
+.BEACON div a {
     position: relative;
     display: inline-block;
     width: 250px;
@@ -413,32 +413,32 @@ video {
     outline: none;
     overflow: hidden;
 }
-.MODELS div a:nth-child(1) {
+.BEACON div a:nth-child(1) {
     color: #393C41;
     background-color: #fff;
 }
-.MODELS div a:nth-child(n + 2) {
+.BEACON div a:nth-child(n + 2) {
     line-height: 36px;
     border: 3px solid #fff;
     color: #fff;
     transition: .5s ease-in-out;
     background-color: transparent;
 }
-.MODELS div a:nth-child(n + 2):hover {
+.BEACON div a:nth-child(n + 2):hover {
     color: #000;
     background-color: #fff;
 }
-.MODELS-one > a {
+.BEACON-one > a {
     display: inline-block;
     padding-bottom: 3px;
     font-size: 12px;
     color: #fff;
     border-bottom: 2px solid #fff;
 }
-.MODELS-one > a:hover {
+.BEACON-one > a:hover {
     border-bottom: 3px solid #fff;
 }
-.MODELS-one h1 {
+.BEACON-one h1 {
     position: relative;
     width: 180px;
     height: 48px;
@@ -446,14 +446,14 @@ video {
     margin: 20px auto;
     overflow: hidden;
 }
-.MODELS-one h1 ul {
+.BEACON-one h1 ul {
     position: absolute;
     top: 0;
     left: -180px;
     width: 300%;
     height: 48px;
 }
-.MODELS-one h1 ul li {
+.BEACON-one h1 ul li {
     float: left;
     width: 180px;
     height: 48px;
@@ -466,12 +466,12 @@ video {
     background: url(../images/img/it.jpg) no-repeat center center;
     background-size: cover;
 }
-.MODELS-two {
+.BEACON-two {
     width: 70%;
 }
-.MODELS-two h1,
-.MODELS-four h1,
-.MODELS-fifth h1 {
+.BEACON-two h1,
+.BEACON-four h1,
+.BEACON-fifth h1 {
     margin: 0 0 10px;
 }
 /* 第三屏 */
@@ -481,10 +481,10 @@ video {
     background: url(../images/img/studying.jpg) no-repeat center center;
     background-size: cover;
 }
-.MODELS-three h1 {
+.BEACON-three h1 {
     margin: 0;
 }
-.MODELS-three h4 {
+.BEACON-three h4 {
     margin: 0 0 10px;
     color: #fff;
     font-size: 17px;

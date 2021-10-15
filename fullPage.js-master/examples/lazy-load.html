@@ -102,8 +102,8 @@
 </select>
 
 <ul id="menu">
-    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
-    <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+    <li data-menuanchor="res" class="active"><a href="#res">First slide</a></li>
+    <li data-menuanchor="it"><a href="#it">Second slide</a></li>
     <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
 </ul>
 
@@ -146,7 +146,7 @@
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {
         menu: '#menu',
-        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        anchors: ['res', 'it', '3rdPage'],
         sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
         onLeave: function(origin, destination, direction){
           if(destination.index === 2){
