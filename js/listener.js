@@ -82,3 +82,46 @@ overSpread.addEventListener('mousedown', function (e) {
 
 
 })
+
+
+/* for phone and pad */
+overSpread.addEventListener('touchstart', function (e) {
+    var _touch = e.touches[0];
+    var x = _touch.pageX; //_touch.clientX; 
+    var spaceX = 0;
+    var num = li.offsetLeft;
+    overSpread.addEventListener('touchmove', move, false)
+
+    function move(e) {
+        var _move = e.touches[0];
+        spaceX = _move.pageX - x; //_move.clientX - x;
+        var count = spaceX / 2 + num;
+        var str = spaceX + num;
+        if (str >= 0) {
+            count = 0;
+        } else if (str <= -window.innerWidth) {
+            count = -window.innerWidth;
+        }
+        li.style.left = count + 'px';
+        if (spaceX > 0) {
+            if (li.offsetLeft >= (-window.innerWidth * 0.45)) {
+                $('.page-break li').eq(0).children().click();
+            } else if (li.offsetLeft >= (-window.innerWidth * 0.95)) {
+                $('.page-break li').eq(1).children().click();
+            }
+        } else if (spaceX < 0) {
+            if (li.offsetLeft <= (-window.innerWidth * 0.55)) {
+                $('.page-break li').eq(2).children().click();
+            } else if (li.offsetLeft <= (-window.innerWidth * 0.05)) {
+                $('.page-break li').eq(1).children().click();
+            }
+        }
+        else {
+            ///alert("no moving ")
+        }
+    }
+    overSpread.addEventListener('touchend', function () {
+        console.log("touchend")
+    }, false)
+
+}, false)
