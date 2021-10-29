@@ -9,6 +9,8 @@
 $(document).ready(function () {
     var flag = true;
     var flag1 = true;
+    var respageflag = 1;
+
     $('#fullpage').fullpage({
         //options here
         anchors: ['res', 'it', 'study', 'ad', 'hotel'],
@@ -84,7 +86,7 @@ $(document).ready(function () {
             fullpage_api.setAllowScrolling(flag);
         }
     })
-    $('.overspread').click(function () { 
+    $('.overspread').click(function () {
         if (flag == false) {
             $('.line').addClass('back');
             $('.right-border').removeClass('open').addClass('close');
@@ -102,31 +104,40 @@ $(document).ready(function () {
         $(this).parent().css('border', '1px solid #fff').siblings().css('border', '1px solid transparent');
     })
     $('.page-break li').eq(0).children().on('click', function () {
+        respageflag = 0;
         $('.crosswise .lirun').stop().animate({
             left: 0
         }, 500);
         $('.BEACON-one h1 ul').stop().animate({
             left: 0
         }).children().eq(0).addClass('appear').removeClass('disappear').siblings().addClass('disappear').removeClass('appear');
-        $lang.eq(0).text('お問い合わせ').siblings().text('了解我们');
+        $lang.eq(0).text('お問い合わせ').siblings().text('BEACONについて');
+        // 设置a标签的href
+        $('.resmoreInfo')[0].href = "./html/res.html#rent";
     })
     $('.page-break li').eq(1).children().on('click', function () {
+        respageflag = 1;
         $('.crosswise .lirun').stop().animate({
             left: '-50%'
         }, 500);
         $('.BEACON-one h1 ul').stop().animate({
             left: -$('.BEACON-one h1 ul li').width(),
         }).children().eq(1).addClass('appear').removeClass('disappear').siblings().addClass('disappear').removeClass('appear');
-        $lang.eq(0).text('お問い合わせ').siblings().text('了解我们');
+        $lang.eq(0).text('お問い合わせ').siblings().text('BEACONについて');
+         // 设置a标签的href
+         $('.resmoreInfo')[0].href = "./html/res.html#res";
     })
     $('.page-break li').eq(2).children().on('click', function () {
+        respageflag = 2;
         $('.crosswise .lirun').stop().animate({
             left: '-100%'
         }, 500);
         $('.BEACON-one h1 ul').stop().animate({
             left: -(2 * $('.BEACON-one h1 ul li').width()),
         }).children().eq(2).addClass('appear').removeClass('disappear').siblings().addClass('disappear').removeClass('appear');
-        $lang.eq(0).text('お問い合わせ').siblings().text('了解我们');
+        $lang.eq(0).text('お問い合わせ').siblings().text('BEACONについて');
+        // 设置a标签的href
+        $('.resmoreInfo')[0].href = "./html/res.html#management";
     })
     // 添加点击波纹事件
     $('.BEACON div a').on('click', function (e) {
@@ -143,7 +154,7 @@ $(document).ready(function () {
         }, 1000)
     })
     // 构建元素img添加到section中
-    var $img = $('<img src="./images/下载 (2).svg">');
+    var $img = $('<img src="./images/next.svg">');
     $img.addClass('z');
     $img.on('click', function () {
         fullpage_api.moveSectionDown();
@@ -221,4 +232,14 @@ $(document).ready(function () {
     //          $(document).off('mousemove');
     //     })
     // })
+
+
+    // $('.resmoreInfo').click(function () {
+
+    //     var curPage = respageflag;
+    //     var h = $('.resmoreInfo')[0].href;
+    //     if (curPage === 1) {
+    //     }
+    // })
+
 });

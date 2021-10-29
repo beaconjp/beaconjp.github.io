@@ -7,21 +7,21 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>BEACON株式会社</title>
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./fullPage.js-master/src/fullpage.css">
+    <link rel="stylesheet" href="./src/css/fullpage.min.css">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
-    <!--sunyujuan start 放在最后样式 -->
+    <link rel="stylesheet" href="./css/transform.css">
     <link rel="stylesheet" href="./css/adjust.css">
-    <!-- end -->
     <link rel="icon" href="favicon.ico" />
-    <script src="./js/jQuery.js"></script>
-    <script src="./fullPage.js-master/vendors/easings.min.js"></script>
-    <script src="./fullPage.js-master/vendors/scrolloverflow.min.js"></script>
-    <script src="./fullPage.js-master/src/fullpage.js"></script>
+    <script src="./src/js/jquery-3.6.0.min.js"></script>
+    <script src="./src/js/easings.min.js"></script>
+    <script src="./src/js/scrolloverflow.min.js"></script>
+    <script src="./src/js/fullpage.min.js"></script>
     <script src="./js/index.js"></script>
 </head>
 
 <body>
-    <!-- 导航栏 -->
+    <!-- ナビ栏 -->
     <div class="header">
         <div class="headertop">
             <!-- logo -->
@@ -29,22 +29,22 @@
                 <img src="./images/img/BEACON-3.png">
             </div>
 
-            <!-- 导航 -->
+            <!-- ナビ -->
             <div class="headstock">
                 <ul>
                     <li><a href="#res">不動産</a></li>
                     <li><a href="#it">IT・情報システム</a></li>
                     <li><a href="#study">留学</a></li>
                     <li><a href="#ad">企業広告</a></li>
-                    <li><a href="#hotel">旅館</a></li>
+                    <li><a href="#hotel">ホテル</a></li>
                 </ul>
             </div>
         </div>
-        <!-- 右边商城，登录与菜单栏 -->
+        <!-- 右边菜单栏 -->
         <div class="store">
             <div>
-                <!-- <a href="#">导航</a> -->
-                <a href="#">导航</a>
+                <!-- <a href="#">ナビ</a> -->
+                <a href="#">ナビ</a>
             </div>
             <div class="line">
                 <div class="top-line"></div>
@@ -58,19 +58,20 @@
     <div id="fullpage">
         <!-- 第一个屏幕 -->
         <div class="section section-one">
+            <div class="res_title"><h1>不動産</h1></div>
             <div class="BEACON-one BEACON">
                 <h1>
                     <ul>
-                        <li class="disappear">买卖 租赁</li>
-                        <li>不動産</li>
+                        <li class="disappear">賃貸</li>
+                        <li>売買</li>
                         <li class="disappear">管理</li>
                     </ul>
                 </h1>
                 <div>
                     <a href="#">お問い合わせ</a>
-                    <a href="#">了解我们</a>
+                    <a href="#">BEACONについて</a>
                 </div>
-                <a href="#">更多关于不动产信息</a>
+                <a class="resmoreInfo" href="./html/res.html">不動産の情報をもっと見る</a>
             </div>
             <ul class="crosswise">
                 <li class="lirun"></li>
@@ -81,7 +82,7 @@
                 <li><a href="#it">IT・情報システム</a></li>
                 <li><a href="#study">留学</a></li>
                 <li><a href="#ad">企業広告</a></li>
-                <li><a href="#hotel">旅館</a></li>
+                <li><a href="#hotel">ホテル</a></li>
             </ul>
             <div class="overspread"></div>
             <ul class="page-break">
@@ -90,7 +91,7 @@
                 <li><span></span></li>
             </ul>
             <div class="tuihuo">
-                下滑了解更多
+                下にスクロールしてください
             </div>
         </div>
 
@@ -114,7 +115,7 @@
                 <h1>留学</h1>
                 <h4>进学 就职</h4>
                 <div>
-                    <a href="#">了解更多</a>
+                    <a href="./html/study.html">了解更多</a>
                 </div>
             </div>
         </div>
@@ -133,9 +134,9 @@
         <!-- 第五个屏幕 -->
         <div class="section section-fifth">
             <div class="BEACON-fifth BEACON">
-                <h1>旅館</h1>
+                <h1>ホテル</h1>
                 <div>
-                    <a href="#">お問い合わせ</a>
+                    <a href="./html/hotel.html">お問い合わせ</a>
                 </div>
             </div>
         </div>
@@ -167,7 +168,7 @@
                 <span>企業広告</span>
             </a></li>
         <li data-menuanchor="hotel"><a href="#hotel">
-                <span>旅館</span>
+                <span>ホテル</span>
             </a></li>
     </ul>
     <script src="./js/listener.js"></script>

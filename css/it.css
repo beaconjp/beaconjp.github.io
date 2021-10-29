@@ -1,0 +1,38 @@
+/* 禁止复制，a标签就不会选中出现蓝色背景 */
+html {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+}
+
+a {
+    outline: none;
+}
+
+/* Page */
+.IT{
+    text-align: center;
+    left: 0%;
+    top: 0%;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+}
+
+/* 第一屏 */
+.section-one {
+    background-color: coral;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.IT-one{
+    background-color: rgba(255, 255, 255, 0);
+    /* position: absolute; */
+    display: flex;
+    top: 5%;
+    flex-direction: column;
+    width: 100%;
+    height: 95%;
+}

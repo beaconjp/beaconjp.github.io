@@ -18,6 +18,18 @@
         flex-direction: column;
     }
 
+    /* 左侧进度条 */
+    #myMenu {
+        position: absolute;
+        left: 15px;
+    }
+
+    #myMenu li a span {
+        left: 10px;
+        width: 60px;
+        font-size: 11px;
+    }
+
     .logo {
         padding-left: 10px;
     }
@@ -30,7 +42,7 @@
         width: 90px;
     }
 
-    /* 右侧导航栏 */
+    /* 右侧ナビ栏 */
     .right-border {
         width: 53%;
     }
@@ -72,10 +84,329 @@
     .Return-top {
         top: 8%;
     }
+
+    .backhome {
+        width: 60px;
+    }
+
+    .wavepoint img {
+        width: 70%;
+        height: 70%;
+    }
+
+    .wavepoint-flow {
+        width: 132px;
+        height: 55px;
+    }
+
+    .wavepoint-flow img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mapshape {
+        left: 0%;
+        top: 15%;
+        width: 100%;
+        height: 80%;
+        /* transform: rotate(-30deg) translate(20px, 80px); */
+    }
+
+    .mapshape img {
+        width: 116%;
+        height: auto;
+        transform: rotate(-30deg) translate(-60px, 40px);
+    }
+
+    .mapshape-text {
+        font-size: 16px;
+        transform: rotate(-30deg) translate(-60px, 40px);
+    }
+
+    .subjectshape {
+        height: 70px;
+        width: 100%;
+        top: 5%;
+    }
+
+    .subjectshape h1 {
+        font-size: 21px;
+    }
+
+    .maptext {
+        top: 10%;
+        left: 0%;
+        width: 100%;
+        height: 70%;
+    }
+
+    /* 四国 */
+    .maptext .map1 {
+        left: 36%;
+        top: 78%;
+    }
+
+    /* 关西 */
+    .maptext .map2 {
+        left: 53%;
+        top: 70%;
+    }
+
+    /* 关东 */
+    .maptext .map3 {
+        left: 77%;
+        top: 59%;
+    }
+
+    /* 东北 */
+    .maptext .map4 {
+        left: 79%;
+        top: 31%;
+    }
+
+    /* 北海道 */
+    .maptext .map5 {
+        left: 45%;
+        top: 1%;
+    }
+
+    /* 中国 */
+    .maptext .map6 {
+        left: 13%;
+        top: 47%;
+    }
+
+    /* 中部 */
+    .maptext .map7 {
+        left: 41%;
+        top: 34%;
+    }
+
+    /* 九州 */
+    .maptext .map8 {
+        left: 9%;
+        top: 83%;
+    }
+
+    .mapshape-text a {
+        font-size: 10px;
+        font-weight: 300;
+        width: 86px;
+        height: 23px;
+    }
+
+    /* 不动产页面 */
+    .property-title {
+        height: 40px;
+    }
+
+    .property-title h1 {
+        font-size: 19px;
+    }
+
+    .property-subject{
+        margin-left: 3%;
+        margin-right: 6%;
+        margin-top: 10px;
+        width: 84%;
+        text-align: left;
+    }
+
+    .property-subject h1 {
+        font-size: 12px;
+        line-height: 21px;
+    }
+
+    .property-content {
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-bottom: 40px;
+        width: 84%;
+        /* overflow-y: scroll;
+        overflow-x: hidden; */
+    }
+
+    .propertylist {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 4%;
+        height: 140px;
+        width: 100%;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .propertyDetail {
+        text-align: start;
+        line-height: 20px;
+        width: 100%;
+    }
+
+    .propertylistIcon {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .blocktitle {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .listIcon {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 6%;
+        margin-right: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .PROPERTY-one .propertylist {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 4%;
+        height: 90px;
+        width: 100%;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .PROPERTY-one .propertylistIcon {
+        width: auto;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .PROPERTY-one .listContent {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .PROPERTY-one .iconfont {
+        color: #4e4e4b;
+        font-size: 45px !important;
+    }
+
+    .PROPERTY-two .propertylist {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 4%;
+        height: 90px;
+        width: 100%;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .PROPERTY-two .propertylistIcon {
+        width: auto;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .PROPERTY-two .listContent {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .PROPERTY-two .iconfont {
+        color: #4e4e4b;
+        font-size: 45px !important;
+    }
+
+
+    /* icon通用配置 */
+    .iconfont {
+        font-size: 38px !important;
+    }
+
+    .listTitle {
+        font-size: 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+        line-height: 23px;
+    }
+
+    .listContent {
+        padding-top: 7px;
+        font-size: 11px;
+    }
+
+    /* 进学 */
+    .STUDY-background {
+        width: 150px;
+        height: 150px;
+    }
+
+    .study-content {
+        margin-left: 6%;
+        margin-right: 6%;
+        margin-bottom: 40px;
+        width: 89%;
+        /* overflow-y: scroll;
+        overflow-x: hidden; */
+    }
+
+    .study-title h1 {
+        font-size: 21px;
+    }
+
+    .studylist {
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 1%;
+        margin-bottom: 6%;
+        height: 240px;
+        width: 94%;
+        padding-left: 2px;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        box-shadow: 3px 3px 8px #c1c1c1;
+    }
+
+    .studyDetail {
+        text-align: start;
+        line-height: 20px;
+        width: 100%;
+    }
+
+    .studylistIcon {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    #section-one h1 {
+        top: 35%;
+        transform: translateY(-35%); 
+        text-align: center;
+        position: absolute;
+    }
+    
 }
 
+
 /* 平板 */
-@media only screen and (min-width:600px) and (max-width: 960px) {
+@media only screen and (min-width:600px) and (max-width: 1024px) {
 
     html,
     body,
@@ -101,7 +432,7 @@
         width: 100px;
     }
 
-    /* 右侧导航栏 */
+    /* 右侧ナビ栏 */
     .right-border {
         width: 33%;
     }
@@ -140,10 +471,317 @@
     .Return-top-appear {
         right: 8%;
     }
+
+    .backhome {
+        width: 100px;
+    }
+
+    .wavepoint img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .wavepoint-flow {
+        width: 190px;
+        height: 80px;
+    }
+
+    .wavepoint-flow img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mapshape {
+        left: 0%;
+        top: 15%;
+        width: 100%;
+        height: 80%;
+        /* transform: rotate(-20deg) translate(-20px, 55px); */
+    }
+
+    .mapshape img {
+        width: 100%;
+        height: auto;
+        transform: rotate(-20deg) translate(-20px, 55px);
+    }
+
+    .mapshape-text {
+        font-size: 19px;
+        transform: rotate(-20deg) translate(-20px, 55px);
+    }
+
+    .subjectshape {
+        height: 70px;
+        width: 100%;
+        top: 5%;
+    }
+
+    .subjectshape h1 {
+        font-size: 30px;
+    }
+
+    .maptext {
+        top: 10%;
+        left: 0%;
+        width: 100%;
+        height: 80%;
+    }
+
+    /* 四国 */
+    .maptext .map1 {
+        left: 30%;
+        top: 76%;
+    }
+
+    /* 关西 */
+    .maptext .map2 {
+        left: 47%;
+        top: 66%;
+    }
+
+    /* 关东 */
+    .maptext .map3 {
+        left: 73%;
+        top: 60%;
+    }
+
+    /* 东北 */
+    .maptext .map4 {
+        left: 73%;
+        top: 34%;
+    }
+
+    /* 北海道 */
+    .maptext .map5 {
+        left: 44%;
+        top: 2%;
+    }
+
+    /* 中国 */
+    .maptext .map6 {
+        left: 13%;
+        top: 40%;
+    }
+
+    /* 中部 */
+    .maptext .map7 {
+        left: 36%;
+        top: 32%;
+    }
+
+    /* 九州 */
+    .maptext .map8 {
+        left: 0%;
+        top: 78%;
+    }
+
+    .mapshape-text a {
+        font-size: 19px;
+        font-weight: 300;
+        width: 135px;
+        height: 34px;
+    }
+
+    /* 不动产页面 */
+    .property-title {
+        height: 36px;
+    }
+
+    /* icon通用配置 */
+    .iconfont {
+        font-size: 33px !important;
+    }
+
+    /* 不动产页面 */
+    .property-title {
+        height: 40px;
+    }
+
+    .property-title h1 {
+        font-size: 19px;
+    }
+
+    .property-subject{
+        margin-left: 3%;
+        margin-right: 6%;
+        margin-top: 10px;
+        width: 84%;
+        text-align: left;
+    }
+
+    .property-subject h1 {
+        font-size: 12px;
+        line-height: 21px;
+    }
+
+    .property-content {
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-bottom: 40px;
+        width: 84%;
+        /* overflow-y: scroll;
+        overflow-x: hidden; */
+    }
+
+    .propertylist {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 4%;
+        height: 140px;
+        width: 100%;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .propertyDetail {
+        width: 100%;
+        text-align: start;
+        line-height: 19px;
+    }
+
+    .propertylistIcon {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .blocktitle {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .listIcon {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 6%;
+        margin-right: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .PROPERTY-one .propertylist {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 4%;
+        height: 90px;
+        width: 100%;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .PROPERTY-one .propertylistIcon {
+        width: auto;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .PROPERTY-one .iconfont {
+        color: #4e4e4b;
+        font-size: 45px !important;
+    }
+
+    .PROPERTY-two .propertylist {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 4%;
+        height: 90px;
+        width: 100%;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .PROPERTY-two .propertylistIcon {
+        width: auto;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .PROPERTY-two .iconfont {
+        color: #4e4e4b;
+        font-size: 45px !important;
+    }
+
+    /* icon通用配置 */
+    .iconfont {
+        font-size: 38px !important;
+    }
+
+    .listTitle {
+        font-size: 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+        line-height: 21px;
+    }
+
+    .listContent {
+        padding-top: 7px;
+        font-size: 11px;
+    }
+
+    /* 进学 */
+
+    .STUDY-background {
+        width: 200px;
+        height: 200px;
+    }
+
+    .study-content {
+        width: 84%;
+        /* overflow-y: scroll;
+        overflow-x: hidden; */
+    }
+
+    .study-title h1 {
+        font-size: 21px;
+    }
+
+    .studylist {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 1%;
+        margin-bottom: 4%;
+        height: 160px;
+        width: 89%;
+        padding-left: 2px;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .studyDetail {
+        width: 100%;
+        text-align: start;
+        line-height: 19px;
+    }
+
+    .studylistIcon {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+    }
+
 }
 
 /* PC */
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1024px) {
 
     /* 设置最小值防止窗口缩小，元素格式变形 */
     html,
