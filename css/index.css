@@ -5,6 +5,10 @@ html {
 
 }
 
+a {
+    outline: none;
+}
+
 /* 左侧进度条 */
 #myMenu {
     position: absolute;
@@ -515,3 +519,4 @@ video {
     color: #D3AF37;
     font-size: 20px;
 }
+

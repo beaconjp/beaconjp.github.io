@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     $('#fullpage').fullpage({
         //options here
-        anchors: ['res', 'it', 'study', 'ad', 'hotel'],
+        anchors: ['res', 'it', 'study', 'ad', 'hotel', 'unit'],
         menu: '#myMenu',
         verticalCentered: false,
         afterLoad(origin, destination, direction) {

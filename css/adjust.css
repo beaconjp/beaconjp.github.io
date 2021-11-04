@@ -204,7 +204,7 @@
         font-size: 19px;
     }
 
-    .property-subject{
+    .property-subject {
         margin-left: 3%;
         margin-right: 6%;
         margin-top: 10px;
@@ -395,11 +395,122 @@
         width: 100%;
     }
 
+    /* 企業広告 */
+    .adTitle {
+        font-size: 38px;
+    }
+    #ad-one .slide-ad1 {
+        background-position-x: left;
+        background-position-y: center;
+    }
+
+    #ad-one h1 {
+        top: 47%;
+        left: 20px;
+        text-align: left;
+        color: #fff;
+    }
+
+    #ad-four h1 {
+        top: 75%;
+        left: 0px;
+        color: #fff;
+    }
+
+    #ad-five h1 {
+        top: 75%;
+        left: 0px;
+        color: #000;
+    }
+
+    #ad-six h1 {
+        top: 75%;
+        left: 0px;
+        color: #000;
+    }
+
+    /* ホテル */
     #section-one h1 {
-        top: 35%;
-        transform: translateY(-35%); 
+        top: 25%;
+        left: 0px;
+        /* transform: translateY(-25%);  */
         text-align: center;
-        position: absolute;
+        position: relative;
+    }
+
+    #section-two h1 {
+        top: 66%;
+        left: 16px;
+        text-align: left;
+        position: relative;
+    }
+
+    #section-three h1 {
+        top: 66%;
+        left: 0px;
+        text-align: center;
+        position: relative;
+    }
+
+    #section-four h1 {
+        top: 43%;
+        left: 0px;
+        text-align: center;
+        position: relative;
+    }
+
+    #section-one h2 {
+        top: 24%;
+        left: 0px;
+        text-align: center;
+    }
+
+    #section-two h2 {
+        top: 65%;
+        left: 16px;
+        text-align: left;
+    }
+
+    #section-three h2 {
+        top: 65%;
+        left: 0px;
+        text-align: center;
+    }
+
+    #section-four h2 {
+        top: 42%;
+        left: 0px;
+        text-align: center;
+    }
+
+    /* QA */
+    .QA {
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .QA-1 {
+        padding-top: 64px;
+    }
+    
+    .QA .question {
+        font-size: 18px;
+    }
+    
+    .QA .answer {
+        font-size: 13px;
+    }
+
+    /*联系我们*/
+    .address {
+        right: 10%;
+        left: 8%;
+        top: 1%;
+        bottom: 30px;
+        width: 80%;
+        height: 35%;
     }
     
 }
@@ -601,7 +712,7 @@
         font-size: 19px;
     }
 
-    .property-subject{
+    .property-subject {
         margin-left: 3%;
         margin-right: 6%;
         margin-top: 10px;
@@ -734,7 +845,6 @@
     }
 
     /* 进学 */
-
     .STUDY-background {
         width: 200px;
         height: 200px;
@@ -776,6 +886,95 @@
         flex-direction: row;
         align-items: flex-start;
         width: 100%;
+    }
+
+    /* 企業広告 */
+    #ad-one .slide-ad1 {
+        background-position-x: left;
+        background-position-y: center;
+    }
+
+    #ad-one h1 {
+        top: 47%;
+        left: 20px;
+        text-align: left;
+        color: #fff;
+    }
+
+    #ad-two h1 {
+        top: 82%;
+    }
+
+    #ad-four h1 {
+        top: 82%;
+        left: 0px;
+        color: #fff;
+    }
+
+    #ad-five h1 {
+        top: 82%;
+        left: 0px;
+        color: #000;
+    }
+
+    #ad-six h1 {
+        top: 82%;
+        left: 0px;
+        color: #000;
+    }
+
+     /* ホテル */
+    #section-one h1 {
+        top: 25%;
+        left: 0px;
+        /* transform: translateY(-25%);  */
+        text-align: center;
+        position: relative;
+    }
+
+    #section-two h1 {
+        top: 66%;
+        left: 16px;
+        text-align: left;
+        position: relative;
+    }
+
+    #section-three h1 {
+        top: 66%;
+        left: 0px;
+        text-align: center;
+        position: relative;
+    }
+
+    #section-four h1 {
+        top: 43%;
+        left: 0px;
+        text-align: center;
+        position: relative;
+    }
+
+    #section-one h2 {
+        top: 24%;
+        left: 0px;
+        text-align: center;
+    }
+
+    #section-two h2 {
+        top: 65%;
+        left: 16px;
+        text-align: left;
+    }
+
+    #section-three h2 {
+        top: 65%;
+        left: 0px;
+        text-align: center;
+    }
+
+    #section-four h2 {
+        top: 42%;
+        left: 0px;
+        text-align: center;
     }
 
 }
