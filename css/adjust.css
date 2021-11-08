@@ -87,9 +87,9 @@
 
     .backhome {
         width: 160px;
-        right: 10px;
+        right: 0px;
         top:2px;
-        justify-content: right;
+        justify-content:flex-end;
     }
 
     .wavepoint img {
@@ -573,6 +573,11 @@
     #IT-one .slide-IT1 {
         background-size: cover;
         background-position-x: 70%;
+        background-position-y: center;
+    }
+
+    #IT-three .slide-IT1 {
+        background-position-x: 51%;
         background-position-y: center;
     }
 

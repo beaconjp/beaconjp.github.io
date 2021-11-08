@@ -24,7 +24,7 @@ function startup() {
 }
 
 var data_it_app = [{
-    "bgImg": "url(../images/img/IT/IT-app-1.jpg)",
+    "bgImg": "url(../images/img/IT/IT-app-1.png)",
     "titleText": "",
 }];
 
@@ -34,7 +34,7 @@ var data_it_mini = [{
 }];
 
 var data_it_web = [{
-    "bgImg": "url(../images/img/IT/IT-web-2.jpg)",
+    "bgImg": "url(../images/img/IT/IT-web-1.png)",
     "titleText": "",
 }];
 
