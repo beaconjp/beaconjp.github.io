@@ -8,12 +8,17 @@
 
 $(document).ready(function () {
 
+    $('.backhome a').css({
+        'color': '#000'
+    });
+
     var slideIndex = 1;
     sliding = false;
     $('#fullpage').fullpage({
         //options here
         anchors: ['addr'],
         verticalCentered: false,
+        scrollOverflow: true,
 
         //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
         css3: false,

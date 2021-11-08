@@ -76,11 +76,13 @@
     opacity: 1;
     float: right;
     position: absolute;
+    top: 4px;
     right: 0;
-    width: 100px;
+    width: 220px;
     height: 52px;
-    text-align: center;
+    text-align:center;
     align-items: center;
+    justify-content: center;
 }
 .backhome>div {
     float: left;
@@ -128,4 +130,12 @@
 
 .fp-auto-height .link li a {
     color: #393C41;
+}
+
+.fp-controlArrow.fp-prev {
+    border-width: 23px 23px 19px 0;
+}
+
+.fp-controlArrow.fp-next {
+    border-width: 23px 0 23px 19px;
 }

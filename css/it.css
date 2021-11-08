@@ -9,30 +9,41 @@ a {
     outline: none;
 }
 
-/* Page */
-.IT{
+h1 {
+    font-size: 3.2em;
+    font-family: arial, helvetica;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    top: 42%;
+    left: 0px;
     text-align: center;
-    left: 0%;
-    top: 0%;
-    z-index: 0;
-    width: 100%;
-    height: auto;
+    position: relative;
 }
 
-/* 第一屏 */
-.section-one {
-    background-color: coral;
-    width: 100%;
-    height: 100%;
+
+.section {
+    text-align: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
-.IT-one{
-    background-color: rgba(255, 255, 255, 0);
-    /* position: absolute; */
-    display: flex;
-    top: 5%;
-    flex-direction: column;
-    width: 100%;
-    height: 95%;
+.sectionIT {
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.slide {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 0 0 0 0;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+#IT-one .slide-IT1 {
+    background-position-x: center;
+    background-position-y: 10%;
 }

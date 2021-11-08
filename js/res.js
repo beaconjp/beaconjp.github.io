@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     $('#fullpage').fullpage({
         //options here
-        anchors: ['res', 'rent', 'management'],
+        anchors: ['res', 'rent', 'management', 'root'],
         verticalCentered: false,
         scrollOverflow: true,
 
@@ -49,7 +49,7 @@ $(document).ready(function () {
     $img.on('click', function () {
         fullpage_api.moveSectionDown();
     })
-    $('.section:nth-child(-n+4)').append($img);
+    $('.section:nth-child(-n+3)').append($img);
 
 
     ////第一屏

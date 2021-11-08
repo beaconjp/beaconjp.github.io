@@ -29,19 +29,32 @@ function startup() {
 $(document).ready(function () {
     var flag = true;
     var flag1 = true;
-    
+
     $('#fullpage').fullpage({
         //options here
         anchors: ['map', 'school', 'school2'],
         verticalCentered: false,
         scrollOverflow: true,
-        
-        afterLoad(origin, destination, direction) {
-            /* do nothing */
+
+        onLeave: function (index, nextIndex, direction) {
+            var t = setTimeout(
+                function () {
+                    var color = '#fff';
+                    if (nextIndex.index == 1) {
+                        color = '#000'
+                    }
+                    $('.backhome a').css({
+                        'color': color
+                    });
+                }, 350);
         },
-        onLeave(origin, destination, direction) {
-            /* do nothing */
+
+        //在谷歌浏览器的的控制台查看结果
+        afterLoad: function (anchorLink, index) {
+            //var indexV = index.index;
+            // console.log(indexV);
         }
+
     });
 
     $('.header .back').on('click', function () {

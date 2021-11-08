@@ -175,9 +175,18 @@ $(document).ready(function () {
         afterLoad(origin, destination, direction) {
             /* do nothing */
         },
-        onLeave(origin, destination, direction) {
-            /* do nothing */
-        }
+        onLeave: function (index, nextIndex, direction) {
+            var t = setTimeout(
+                function () {
+                    var color = '#fff';
+                    if (nextIndex.index == 4 || nextIndex.index == 5 || nextIndex.index == 6 || nextIndex.index == 7) {
+                        color = '#000'
+                    }
+                    $('.backhome a').css({
+                        'color': color
+                    });
+                }, 350);
+        },
     });
 
 
