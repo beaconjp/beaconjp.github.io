@@ -2,7 +2,9 @@
 html {
     -webkit-user-select: none;
     -moz-user-select: none;
-
+    font-family: "webfont" !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -11,7 +13,7 @@ a {
 
 h2 {
     font-size: 24px;
-    font-family: arial, helvetica;
+    /* font-family: arial, helvetica; */
     color: #000;
     font-weight: bold;
     /* width: 60px; */

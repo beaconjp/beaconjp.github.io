@@ -2,12 +2,15 @@
 html {
     -webkit-user-select: none;
     -moz-user-select: none;
+    font-family: "webfont" !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
 }
 
 h1 {
     font-size: 3em;
-    font-family: arial, helvetica;
+    /* font-family: arial, helvetica; */
     color: #fff;
     margin: 0;
     padding: 0;
@@ -20,7 +23,6 @@ h1 {
 h2 {
     font-size: 3em;
     font-weight: normal;
-    font-family:'Times New Roman', Times, serif;
     color: #fff;
     margin: 0;
     padding: 0;

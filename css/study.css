@@ -2,7 +2,9 @@
 html {
     -webkit-user-select: none;
     -moz-user-select: none;
-
+    font-family: "webfont" !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -189,7 +191,7 @@ a {
     margin: 0 0 10px;
     color: #fff;
     font-size: 32px;
-    font-family: tesila3;
+    /* font-family: tesila3; */
     font-weight: 300;
 }
 
@@ -200,7 +202,7 @@ a {
     height: 36px;
     font-size: 19px;
     font-weight: 300;
-    font-family: tesila3;
+    /* font-family: tesila3; */
     border-radius: 0px;
     line-height: 40px;
     box-sizing: border-box;
@@ -265,7 +267,7 @@ a {
 .study-title h1 {
     color: #000;
     font-size: 25px;
-    font-family: tesila3;
+    /* font-family: tesila3; */
     font-weight: 400;
 }
 
@@ -317,7 +319,7 @@ a {
     padding-right: 5%;
     color: #333;
     font-size: 16px;
-    font-family: tesila3;
+    /* font-family: tesila3; */
     font-weight: 400;
 }
 
@@ -327,7 +329,7 @@ a {
     padding-right: 2%;
     color: #333333;
     font-size: 14px;
-    font-family: tesila3;
+    /* font-family: tesila3; */
     font-weight: 300;
     overflow: hidden;
     text-overflow: ellipsis;

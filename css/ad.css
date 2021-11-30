@@ -2,7 +2,9 @@
 html {
     -webkit-user-select: none;
     -moz-user-select: none;
-
+    font-family: "webfont" !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -11,7 +13,7 @@ a {
 
 h1 {
     font-size: 3.2em;
-    font-family: arial, helvetica;
+    /* font-family: arial, helvetica; */
     color: #fff;
     margin: 0;
     padding: 0;
@@ -147,7 +149,7 @@ h1 {
     color: #494949;
     font-size: 24px;
     font-weight: bold;
-    font-family: tesila1;
+    /* font-family: tesila1; */
     margin-bottom: 10px;
     text-align: left;
 }
@@ -156,7 +158,7 @@ h1 {
     color: #717171;
     font-size: 15px;
     font-weight: normal;
-    font-family: tesila1;
+    /* font-family: tesila1; */
     text-align: left;
     line-height: 24px;
 }

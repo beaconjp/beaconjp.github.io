@@ -581,6 +581,20 @@
         background-position-y: center;
     }
 
+    .fp-auto-height .brief{
+        height: 70px;
+    }
+
+    .fp-auto-height .permit{
+        left: 3%;
+        width: 96%;
+        height: 170px;
+    }
+
+    .h-right{
+        margin-left: 17px;
+    }
+
 }
 
 

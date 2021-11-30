@@ -7,6 +7,13 @@
 // }
 
 $(document).ready(function () {
+
+    // var t= $('.link')[0].offsetLeft;
+    // alert(t);
+    // $('.permit').css({
+    //         'left': t,
+    //     });
+
     var flag = true;
     var flag1 = true;
     var respageflag = 1;
