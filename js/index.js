@@ -6,6 +6,24 @@
 //     });
 // }
 
+function startup() {
+    var fullHref = window.location.href;
+    var str = ".com";
+    // console.log(fullHref);
+    // console.log(fullHref.search(str) == -1 );  // true
+
+    var record = $('.right-record')
+    if (fullHref.search(str) == -1) {
+        // 包含
+        record.css({
+            'display': 'none'
+        });
+        $('.fp-auto-height .permit .permit-one').css({
+            'height': '18px'
+        });
+    }
+}
+
 $(document).ready(function () {
 
     // var t= $('.link')[0].offsetLeft;
@@ -131,8 +149,8 @@ $(document).ready(function () {
             left: -$('.BEACON-one h1 ul li').width(),
         }).children().eq(1).addClass('appear').removeClass('disappear').siblings().addClass('disappear').removeClass('appear');
         $lang.eq(0).text('お問い合わせ').siblings().text('BEACONについて');
-         // 设置a标签的href
-         $('.resmoreInfo')[0].href = "./html/res.html#res";
+        // 设置a标签的href
+        $('.resmoreInfo')[0].href = "./html/res.html#res";
     })
     $('.page-break li').eq(2).children().on('click', function () {
         respageflag = 2;

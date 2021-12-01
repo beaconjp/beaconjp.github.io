@@ -1,4 +1,5 @@
 /* 手机 */
+
 @media only screen and (max-width: 600px) {
 
     html,
@@ -587,14 +588,41 @@
 
     .fp-auto-height .permit{
         left: 3%;
-        width: 96%;
+        width: 95%;
         height: 170px;
+        font-size: 13px;
     }
 
+    .fp-auto-height .permit .permit-one {
+        height: 40px;
+        width: 100%;
+    }
+
+    .permit-title{
+        font-size: 14px;
+    }
     .h-right{
-        margin-left: 17px;
+        margin-left: 7px;
+        font-size: 8px;
     }
 
+}
+@media only screen and (max-width: 320px) {
+    .permit-title{
+        font-size: 12px;
+    }
+    .h-right{
+        margin-left: 7px;
+        font-size: 8px;
+    }
+
+    .fp-auto-height .permit{
+        height: 220px;
+    }
+
+    .fp-auto-height .permit p{
+        height: 40px;
+    }
 }
 
 
@@ -1059,6 +1087,19 @@
         text-align: center;
     }
 
+    .fp-auto-height .brief{
+        height: 70px;
+    }
+
+    .fp-auto-height .permit{
+        left: 28%;
+        width: 60%;
+        height: 170px;
+    }
+
+    .h-right{
+        margin-left: 25px;
+    }
 }
 
 /* PC */
