@@ -211,7 +211,7 @@ const langJP = {
     'permit_h1_left':       'BEACON株式会社&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
     'permit_h1_addr':       'BEACONについて',
     'permit_h1_join':       '採用情報',
-    'permit_h1_record':     '© 2021 鲁ICP备2021018030号-1',
+    'permit_h1_record':     '© 2021 鲁ICP备2021018030号-2',
     'permit_h2_left':       '宅地建物取引業者免許証',
     'permit_h2_right':      '東京都知事（１）第１０４１７２号',
     'permit_h3_left':       '住宅宿泊管理業者&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
