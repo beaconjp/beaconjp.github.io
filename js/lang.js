@@ -148,7 +148,7 @@ const langCN = {
     'res_rootlist_4': '营业时间10:30～19:00 休息日：星期三、星期天',
 
     'res_subslist': '广告公司',
-    'res_subslist_1': '地址：埼玉县草加市神明2-4-14',
+    'res_subslist_1': '埼玉县草加市神明2-4-14',
     'res_subslist_2': 'TEL 080-9426-1688',
     'res_subslist_3': '营业时间 10:30～19:00 休息日：周一、周日',
 
