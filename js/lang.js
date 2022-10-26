@@ -122,7 +122,7 @@ const langCN = {
     'addr_japan_mailto': 'mailto:beacon0921@gmail.com?subject=&body=',
 
     'addr_japan_komagome': 'BEACON株式会社 北区支店',
-    'addr_japan_addr_komagome': '地址：東京都北区西ヶ原1-6-6 3階',
+    'addr_japan_addr_komagome': '东京都北区西ヶ原1-6-6 3楼',
     'addr_space':' ',
 
     'addr_japan_sub_city': '埼玉',
@@ -142,7 +142,7 @@ const langCN = {
     'res_beacon': 'BEACON株式会社',
 
     'res_rootlist': '总公司',
-    'res_rootlist_1': '东京都知事（1）第10412号',
+    'res_rootlist_1': '东京都知事（1）第104172号',
     'res_rootlist_2': '东京都千代田区锻冶町1丁目3-1 VORT神田8楼',
     'res_rootlist_3': 'TEL 03-6258-1688 &nbsp; FAX 03-6258-1686',
     'res_rootlist_4': '营业时间10:30～19:00 休息日：星期三、星期天',
